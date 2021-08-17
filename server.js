@@ -1,5 +1,5 @@
 const { Socket } = require('socket.io');
-const io = require('socket.io')(8123, { //8123 is the local port we are binding the demo server to
+const io = require('socket.io')(process.env.PORT || 8123, { //8123 is the local port we are binding the demo server to
     pingInterval: 30005,		//An interval how often a ping is sent
     pingTimeout: 5000,		//The time a client has to respont to a ping before it is desired dead
     upgradeTimeout: 3000,		//The time a client has to fullfill the upgrade
